@@ -1,0 +1,38 @@
+<p>contact works!</p>
+<button mat-raised-button>
+  Material Button
+</button>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Claim Name</th>
+        <th scope="col">Claim Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>sub</td>
+        <td>{{idTokenClaim.sub}}</td>
+      </tr>
+      <tr>
+        <td>aud</td>
+        <td>{{idTokenClaim.aud}}</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>{{idTokenClaim.name}}</td>
+      </tr>
+      <tr>
+        <td>exp</td>
+        <td>{{idTokenClaim.exp}}</td>
+      </tr>
+      <tr>
+        <td>scope</td>
+        <td>{{idTokenClaim.scp}}</td>
+      </tr>
+      <tr>
+        <td>given-name</td>
+        <td>{{idTokenClaim.family_name}}</td>
+      </tr>
+    </tbody>
+  </table>

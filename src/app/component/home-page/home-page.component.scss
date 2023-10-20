@@ -1,0 +1,142 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+
+
+
+#mainText {
+  font-size: 48px;
+  // font-family: 'Roboto';
+  margin-bottom: 2%;
+  max-width: 80%;
+  position: relative;
+  line-height: 32px;
+  font-family: 'Roboto', sans-serif;
+  // left: 100px;
+  // top: 60px;
+  color: rgb(255, 255, 255);
+}
+
+#lineText {
+  color: rgb(255, 255, 255);
+  position: relative;
+  font-size: 18px;
+  // left: 100px;
+  // top: 60px;
+  max-width: 60%;
+}
+
+#imgContent {
+  z-index: 1;
+  // position: relative;
+  // width: 60%;
+  margin:  auto;
+  // font-weight: bold;
+  margin-left: 60px;
+  margin-top: -300px;
+}
+
+// #imgContentMain {
+// }
+
+
+/* CSS */
+.button-1 {
+  background-color: #e73c7e;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin-top: 1%;
+  outline: none;
+  padding: 10px 35px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+}
+
+.UserStories {
+  // position: relative;
+  margin-top: 13%;
+  margin-bottom: 4%;
+  // max-width: 70%;
+}
+
+.cardholder {
+  // margin-left: auto;
+  // margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+// .card {
+//   // position: absolute;
+//   // top: 50%;
+//   // left: 50%;
+//   // transform: translateX(-50%) translateY(-50%);
+// }
+
+.card-story{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  width: 100%;
+  // margin-left: 7%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-text{
+  text-align: justify;
+}
+
+.button-submit {
+  background-color: #e73c7e;
+  color:rgb(240, 240, 248);
+  /* width: 100px; */
+}
+
+span::before {
+  content: "innovation";
+  animation: animate infinite 6s;
+  // padding-left: 10px;
+}
+
+@keyframes animate {
+
+  30% {
+    content: "innovation";
+  }
+
+  60% {
+    content: "care";
+  }
+
+  100% {
+    content: "technology";
+  }
+}
+

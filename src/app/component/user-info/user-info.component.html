@@ -1,0 +1,94 @@
+
+<div class="usinfoBg" role="main">
+
+
+
+  <div *ngIf="isAuthenticated">
+
+    <div>
+      <mat-card>
+        <!-- <div  *ngIf="loading"><mat-spinner style="margin:auto;"></mat-spinner></div> -->
+        <div *ngIf="isAuthenticated">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title style="color: #e73c7e;"> </mat-card-title>
+            <!-- <mat-card-subtitle> {{userEmail}}</mat-card-subtitle> -->
+          </mat-card-header>
+          <div style="margin-left: 90%; display: inline-block;">
+          <a mat-button routerLink="/profile-update" style="color: #e73c7e;"><mat-icon>edit</mat-icon></a>
+          </div>
+        <!-- <mat-card-title>
+          User Details
+        </mat-card-title> -->
+        <!-- <br/> -->
+        <hr class="hr_main" />
+        <mat-card-content>
+          <div class="row">
+            <div class="col-6">
+              <table>
+              <tr>
+                <td style="width: 35%;"> <b> Username </b> </td>
+                 <td> {{tokenClaims['signInNames.userName']}} </td>
+              </tr>
+              <tr>
+                <td> <b>First Name</b> </td>
+                 <td> {{tokenClaims.givenName}} </td>
+              </tr>
+              <tr>
+                <td> <b>Last Name</b> </td>
+                 <td> {{tokenClaims.surname}} </td>
+              </tr>
+              </table>
+            </div>
+            <div class="col-6">
+              <table>
+                <tr>
+                  <td style="width: 40%;"> <b>Email Address</b> </td>
+                  <td> {{tokenClaims['signInNames.emailAddress']}} </td>
+                </tr>
+                <tr>
+                  <td> <b>Contact Number</b> </td>
+                   <td> {{tokenClaims['signInNames.phoneNumber']}} </td>
+                </tr>
+                </table>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <!-- <table *ngIf="userAddress.trim().length !== 0"> -->
+                <table>
+                <!-- <tr>
+                  <td style="width: 16%;"> <b> Address </b> </td>
+                   <td> {{tokenClaims}} </td>
+                </tr> -->
+                <tr>
+              </table>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-12">
+              <table>
+                <tr>
+                  <td style="width: 30%;"> <b> Preffered Warehouse Location </b> </td>
+                   <td> {{userAddress}} </td>
+                </tr>
+                <tr>
+              </table>
+            </div>
+          </div> -->
+        </mat-card-content>
+      </div>
+        <!--<div [innerHTML]="userDetails"></div>-->
+      </mat-card>
+    </div>
+    <!-- <br/> -->
+    <!-- <mat-divider></mat-divider> -->
+    <!-- <br/> -->
+    <!-- <div>
+      <h4>Token Details</h4>
+      <div [innerHTML]="tokenDetails"></div>
+    </div> -->
+  </div>
+
+</div>

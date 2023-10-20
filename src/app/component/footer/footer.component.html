@@ -1,0 +1,31 @@
+<!-- <mat-toolbar id= "footer" style="background-color: black;" >
+  <div>
+
+  </div>
+  <div class="footer-text">
+    <p>All Rights Reserved &copy; IdentiFence 2021.</p>
+  </div>
+</mat-toolbar> -->
+<div class="text-center text-white d-flex justify-content-between" style="background-color: #000000;">
+  <!-- <div style="height: 100px;">
+
+  </div> -->
+  <div class="text-center p-2 align-middle">
+    <p>© 2023 Identifence Logistics. All Right Reserved.</p>
+  </div>
+  <div class="text-center p-2 align-middle">
+    <a href="#" style="color:#ffffff;text-decoration: underline">Term of Use</a>
+  </div>
+
+  <!-- <div style="height: 100px;">
+
+  </div> -->
+
+</div>
+
+<script>
+  var footerResize = function() {
+    $('#footer').css('position', $("body").height() + $("#footer").innerHeight() > $(window).height() ? "inherit" : "fixed");
+  };
+  $(window).resize(footerResize).ready(footerResize);
+</script>

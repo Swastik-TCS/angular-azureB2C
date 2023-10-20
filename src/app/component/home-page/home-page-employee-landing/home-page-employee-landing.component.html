@@ -1,0 +1,114 @@
+<div class="pageBg" style="padding-bottom: 5%;">
+
+  <div class="overview">
+    <h1>Overview</h1>
+    <hr class="hr_main" />
+
+    <div class="row">
+      <div class="col-2">
+        <div class="card">
+          <!-- <span style="width: 2%;  background-color: brown;"></span> -->
+          <div class="card-body">
+            <h3 class="card-title overviewTitle">Partners</h3>
+            <p class="card-text"><span style="font-weight: bold; font-size:20px;">50</span></p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title overviewTitle">Multifactor Authentication Type (Primary)</h3>
+            <div class="row">
+              <div class="col-4"><span style="font-weight: bold; font-size:20px;">30</span> Mobile</div>
+              <div class="col-4"><span style="font-weight: bold; font-size:20px;">15</span> Email</div>
+              <div class="col-4"><span style="font-weight: bold; font-size:20px;">5</span> App</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title overviewTitle">Verification Type (Most Preferred)</h3>
+            <div class="row">
+              <div class="col-6"><span style="font-weight: bold; font-size:20px;">42</span> SMS</div>
+              <div class="col-6"><span style="font-weight: bold; font-size:20px;">8</span> Voice</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="activities-partners">
+    <h2>Activities &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Partners</h2>
+    <hr />
+    <div class="wrapper-activities">
+      <div class="card">
+        <div class="horizText" mat-button >Password Reset</div>
+      </div>
+      <div class="card">
+        <div class="horizText" mat-button>Role Assignment</div>
+      </div>
+      <div class="card">
+        <div class="horizText" mat-button>Activate</div>
+      </div>
+      <div class="card">
+        <div class="horizText" mat-button>Profile Update</div>
+      </div>
+      <div class="card">
+        <div class="horizText" mat-button>2FA device deletion</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mytask">
+    <h2>My Task</h2>
+    <hr class="hr_main" />
+    <div class="row">
+      <div *ngFor="let i of tempArr" class="col-3">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-weight: bold; color: rgb(53, 53, 153); margin-bottom: -5%;">Shipment Approvals </h3>
+            <!-- <hr/> -->
+            <hr class="hr_main" />
+            <div>
+              <p style="color: #888;">Organization Type</p>
+              <h3 style="margin-top: -7%; font-weight: bold;">Shipping Freights</h3>
+            </div>
+            <hr class="hr_main" />
+            <div>
+              <p style="color: #888;">Organization ID</p>
+              <h3 style="margin-top: -7%; font-weight: bold;">SF123456</h3>
+            </div>
+            <hr class="hr_main" />
+            <div>
+              <p style="color: #888;">Location</p>
+              <div class="row">
+                <div class="col-6">
+                  <h3 style="margin-top: -7%; font-weight: bold;">Bangalore</h3>
+                </div>
+                <div class="col-6">
+                  <button mat-button class="button-approve">Approve</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+

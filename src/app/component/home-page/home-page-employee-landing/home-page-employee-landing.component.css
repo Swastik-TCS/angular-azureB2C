@@ -1,0 +1,87 @@
+.pageBg {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+}
+.overview {
+}
+
+.overview>h1 {
+  color: rgb(134, 60, 204);
+  font-weight: bold;
+}
+
+/* .overview>hr {
+  color: rgb(134, 60, 204);
+} */
+
+.overview>.hr_main {
+  border-top: 2px solid rgb(134, 60, 204);
+  color: rgb(134, 60, 204);
+  height: 2px;
+
+  /* padding-left: 5%; */
+  /* margin:0 auto; */
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.overviewTitle {
+  font-weight: 600;
+  color: rgb(134, 60, 204);
+}
+
+.activities-partners {
+  padding-top: 1%;
+}
+
+.activities-partners>h2 {
+  color: #cb336b;
+}
+.activities-partners>hr {
+  color: #cb336b;
+  border-top: 2px solid #cb336b;
+  height: 2px;
+}
+
+.wrapper-activities {
+  display: grid;
+  grid-template-columns : repeat(5, 1fr);
+  grid-auto-rows : 180px;
+}
+
+.wrapper-activities>.card {
+  background-color: rgb(68, 11, 122);
+  /* font-size: large; */
+  color: azure;
+  border: 1px solid #000;
+}
+
+.horizText {
+  position: relative;
+  right: 40%;
+  top: 18%;
+  font-size: 16px;
+  /* transform-origin: 0 20px; */
+  /* transform-origin: 0 0 50 100 0 ; */
+  transform: rotate(-90deg);
+}
+
+.mytask>h2 {
+  color: #cb336b;
+  padding-top: 2%;
+}
+
+.mytask>hr {
+  color: #cb336b;
+  border-top: 2px solid #cb336b;
+  height: 2px;
+}
+
+
+
+.button-approve {
+  background-color: #cb336b;
+  color:rgb(240, 240, 248);
+  border-radius: none;
+}

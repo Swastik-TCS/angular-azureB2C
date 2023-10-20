@@ -1,0 +1,229 @@
+.logo {
+    /* color: rgb(250, 248, 248); */
+    font-size: large;
+    font-style: italic;
+    /*font-weight: bold;*/
+    /* background-image: url('./../../../assets/user.jpg');
+    background-size: cover; */
+  }
+  
+  .logo-text{
+    font-size: 1.875rem;
+    /* font-family: 'Roboto'; */
+    font-weight: 500;
+  }
+  
+  .headerLinks {
+    margin-left: auto;
+  }
+  
+  .custom__menu + * .cdk-overlay-pane > div.mat-menu-panel > div.mat-menu-content {
+    background-color: black;
+  }
+  
+  .mat-toolbar {
+    background: #03045e;
+    color: #fff;
+  }
+  
+  
+  .button-10 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: none;
+  
+    color: #fff;
+    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+     background-origin: border-box;
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-10:focus {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
+  }
+  
+  .loginButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: none;
+  
+    color: #fff;
+    background: linear-gradient(180deg, #e73c7e 0%, #e73c7e 100%);
+     background-origin: border-box;
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .loginButton:focus {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
+  }
+  
+  
+  
+  #menuToggle
+  {
+    display: block;
+    position: relative;
+    top: 15px;
+    left: 22px;
+  
+    z-index: 1;
+  
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #cdcdcd;
+  
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover
+  {
+    color: #cb336b;
+  }
+  
+  
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+  
+    cursor: pointer;
+  
+    opacity: 0;
+    z-index: 2;
+  
+    -webkit-touch-callout: none;
+  }
+  
+  
+  
+  #menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+  
+    background: #cdcdcd;
+    border-radius: 3px;
+  
+    z-index: 1;
+  
+    transform-origin: 4px 0px;
+  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #cdcdcd;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  
+  #menu
+  {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 105px;
+  
+    background: black;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+  
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #menu li
+  {
+    padding: 1px 0;
+    font-size: 15.2px;
+  }
+  
+  
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  }
+  
+  .overlay{
+              position: absolute;
+              transition: 0.5s ease;
+              height: 950;
+              width: 1320;
+              top: 0;
+          }
+  
+  .header:hover .overlay {
+              opacity: 1.9;
+          }
+          .material-symbols-rounded {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+          }
+  
+  
+          hr {
+            color: #fff;
+            background-color: #fff;
+          }
+  
+  
+  

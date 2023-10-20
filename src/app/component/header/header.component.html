@@ -1,0 +1,162 @@
+
+<!-- Navbar -->
+
+<!-- Navbar -->
+
+
+<nav class="navbar navbar-expand-lg " style="background-color: #000000;padding: 0 12px;" >
+  <!-- Container wrapper -->
+  <div class="container-fluid" style="padding:0;">
+
+    <div  class="overlay" *ngIf="isAuthenticated">
+      <nav role="navigation">
+        <div id="menuToggle">
+
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+
+            <hr><a routerLink="/book-shipment" style="color:DodgerBlue;"><b><li>Book a Shipment</li></b></a><hr>
+            <a href="#"><li>Standard Delivery Services</li></a>
+            <a href="#"><li>Same Day Delivery</li></a>
+            <a href="#"><li>Overnight Shipping Services</li></a>
+            <!-- <a href="#"><li>Rush and On-Demand Deliveries</li></a><hr> -->
+            <a href="#"><li>Parcel Services</li></a>
+            <!-- <a href="#"><li>Luggage Delivery Services</li></a><hr>-->
+            <a routerLink="/warehouse-services"><li>Warehousing Services</li></a><hr>
+            <a routerLink="/subscription" style="color:DodgerBlue;"><b><li>Subscription</li></b></a><hr>
+            <a href="#" style="color:DodgerBlue;"><b><li>Address Book</li></b></a><hr>
+            <a routerLink="/warehouse-services"><li>Consignee Address</li></a>
+            <a href="#"><li>Recipient Address</li></a>
+            <a href="#" style="color:DodgerBlue;"><b><li>Invoices</li></b></a><hr>
+            <a href="#" style="color:DodgerBlue;"><b><li>Service Guide</li></b></a><hr>
+            <a style="color:DodgerBlue;"><b><li>Report an Incident</li></b></a><hr>
+            <a href="#" style="color:DodgerBlue;"><b><li>FAQs</li></b></a><hr>
+
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Navbar brand -->
+    <div class="container-fluid" [ngStyle]="isAuthenticated?{'margin-left': '3%'} : {'margin-left': '1%'}">
+    <!-- style="margin-left: 3%; "> -->
+      <!-- <a class="navbar-brand col-1 "  routerLink="/">
+        <img
+          src="assets/tcs_log1.png"
+          height="30"
+          alt="Logo"
+          loading="lazy"
+          style="display:inline-block"
+        />
+        <div style="display:inline-block;"><h2 style="color: #017ec6;  ">IdentiFence Logistics</h2></div> -->
+
+      <!-- <p class="logo-text" style="color: #017ec6;margin:0;"></p> -->
+      <!-- </a> -->
+      <div class="container-fluid" style="padding:0;">
+      <a class="navbar-brand col-1" routerLink="/home">
+        <img
+          src="assets/tcs_IdeLog_logo.png"
+          height="44"
+          alt="Logo"
+          loading="lazy"
+          style="margin-top: 0px; display:inline-block"
+        />
+      <!-- <p class="logo-text" style="color: #017ec6;margin:0; display:inline-block">IdentiFence Logistics</p> -->
+      </a>
+      </div>
+    </div>
+
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" style="margin-right: 3%;" id="navbarButtonsExample">
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 headerLinks">
+        <li class="nav-item" *ngIf="!isAuthenticated">
+          <a class="nav-link" mat-button href="#" style="text-decoration: none; color: rgb(197, 197, 197);">About Us</a>
+        </li>
+        <li class="nav-item" *ngIf="isAuthenticated">
+          <a class="nav-link" mat-button routerLink="/userinfo" style="text-decoration: none; color: rgb(197, 197, 197);">{{userName}}</a>
+        </li>
+        <!-- <li class="nav-item">
+
+          <a mat-button class="nav-link" [matMenuTriggerFor]="shippingMenu" style="text-decoration: none; color: rgb(197, 197, 197);">
+            Shipping
+            <mat-icon style="color: rgb(197, 197, 197);"> expand_more</mat-icon>
+          </a>
+          <mat-menu #shippingMenu="matMenu" backdropClass="customize">
+            <a mat-menu-item routerLink='/change-password' style="text-decoration: none; ">Rate Details</a>
+            <a mat-menu-item routerLink='/setup-mfa' style="text-decoration: none; ">Schedule Pickup & Delivery</a>
+            <a mat-menu-item routerLink='/profile-update' style="text-decoration: none; ">All Shipping Services</a>
+          </mat-menu>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" mat-button href="#" style="text-decoration: none; color: rgb(197, 197, 197);">Tracking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" mat-button href="#" style="text-decoration: none; color: rgb(197, 197, 197);">Support</a>
+        </li> -->
+          <li *ngIf="false" class="nav-item" style="margin-left: 48px;">
+            <!-- <button mat-buttton class="nav-link" href="#">Register</button> -->
+            <button class="button-10" >Register</button>
+          </li>
+          <li *ngIf="!isAuthenticated" class="nav-item"  style="margin-left: 16px;">
+            <!-- <a class="nav-link" href="#">Login</a> -->
+            <button class="loginButton" [matMenuTriggerFor]="menu"  >Login</button>
+
+            <mat-menu #menu="matMenu" backdropClass="customize">
+              <a mat-menu-item (click)="login()"  style="text-decoration: none; ">Customer Login</a>
+              <a mat-menu-item  style="text-decoration: none; ">Partner Login</a>
+              <a mat-menu-item  style="text-decoration: none; ">Employee Login</a>
+            </mat-menu>
+
+            <mat-menu #partnerLoginMenu="matMenu" backdropClass="customize">
+              <a mat-menu-item routerLink='/forgot-password' style="text-decoration: none;">Delegated Admin Login</a>
+              <a mat-menu-item [matMenuTriggerFor]="partnerLoginMenu"  style="text-decoration: none; ">Agent Login</a>
+            </mat-menu>
+            <!-- <a mat-menu-item (click)="signIn()" style="text-decoration: none; color: rgb(197, 197, 197);">Employee Login</a> -->
+          </li>
+
+
+         <div *ngIf="isAuthenticated">
+           <!-- <div style="color: rgb(197,197,197);">{{userGreetings}}</div> -->
+          <div class="dropdown" style="margin-top: 4%;">
+
+            <a mat-button [matMenuTriggerFor]="menu" style="text-decoration: none; ">
+
+              <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+              style="color: rgb(197, 197, 197);"
+            >
+               <mat-icon style="color: rgb(197, 197, 197);"> account_circle</mat-icon>
+            </a>
+          </a>
+        <mat-menu #menu="matMenu">
+          <a mat-menu-item routerLink='/userinfo' style="text-decoration: none;">User Profile</a>
+          <a mat-menu-item routerLink='/profile-update' style="text-decoration: none;">Update Profile</a>
+          <a mat-menu-item routerLink='/agreements' style="text-decoration: none;">View Agreements</a>
+          <a mat-menu-item routerLink='/change-password' style="text-decoration: none;">Change Password</a>
+          <a mat-menu-item routerLink='/setup-mfa' style="text-decoration: none;">Device Management</a>
+          <a mat-menu-item routerLink='/session-management' style="text-decoration: none;">Manage Sessions</a>
+          <a mat-menu-item (click)="logout()" style="text-decoration: none;">Logout</a>
+        </mat-menu>
+
+          </div>
+        </div>
+
+      </ul>
+    </div>
+    <!-- Collapsible wrapper -->
+
+  </div>
+  <!-- Container wrapper -->
+</nav>

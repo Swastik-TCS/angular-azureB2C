@@ -1,0 +1,119 @@
+
+<div style="background-color: #fff;" *ngIf="!isAuthenticated && !loading">
+  <img id="image" src="assets/HomePage_bg_s.png" style="width: 100%; height: 93vh; filter: grayscale(100%);" />
+  <!-- <div id="image"></div> -->
+  <div id="imgContent">
+      <div id="mainText" style="display: inline-block;" >Logistics through <span> </span> </div>
+        <!-- <div id="mainText-change" style="display: inline-block;">innovation, care & technology</div></div> -->
+      <div id="lineText">
+        Explore and evolve your ideas for effective supply chain logistics method & make them efficient, quantifiable and technology driven. Ideology driven by convenience, great service evaluations, secure payments options and on-time delivery
+      </div>
+      <div id="btnText">
+        <button class="button-1" mat-button (click)="onExplore()">Explore</button>
+      </div>
+  </div>
+
+    <div class="UserStories">
+
+      <div class="row card-story" >
+
+        <div class="col-2"></div>
+        <div class="col-8 cardholder">
+          <div class="card border-0 " style=" background-color: #ffffff;">
+            <div class="row">
+              <div class="col-6">
+                <img src="assets/homePage_1_s.png" loading="lazy" style="margin-top: 5%;"  class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-6">
+                <div class="card-body" >
+                  <h1 class="card-title" style="font-weight: bold; color: #EA4C89;">Supporting small businesses & Cost
+                    Efficient</h1>
+                  <p class="card-text">Our Small Business Hub provides you with information and
+                    insights needed to help you adapt and keep your business
+                    moving. Our supply chain platform and logistics operations bring
+                    flexibility, breadth, efficiency and innovation to our customers’
+                    supply chain and logistics.
+                  </p>
+                  <div id="btnText">
+                    <button mat-button class="button-submit" role="button">Read More >></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+
+      </div>
+
+      <div class="row card-story" >
+        <div class="col-2"></div>
+        <div class="col-8 cardholder">
+          <div class="card border-0 " style=" background-color: #ffffff;">
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h1 class="card-title" style="font-weight: bold; color: #EA4C89;">Insights and Innovation</h1>
+                  <p class="card-text">To enable collaboration, the company brings together
+                    customers, research and academic institutions, industry
+                    partners, and logistics experts within the business divisions.
+                  </p>
+                  <div id="btnText">
+                    <button mat-button class="button-submit" role="button">Read More >></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="assets/homePage_2_s.png" loading="lazy" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+
+      </div>
+
+      <div class="row card-story" >
+
+        <div class="col-2"></div>
+        <div class="col-8 cardholder">
+          <div class="card border-0 " style=" background-color: #ffffff;">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="assets/homePage_3_s.png" loading="lazy" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h1 class="card-title" style="font-weight: bold; color: #EA4C89;">Partner Ecosystem</h1>
+                  <p class="card-text">As a part of our vision, we extend our logistics ecosystem by
+                    enabling network partners, such as franchisees, retail partners
+                    and delivery agents, to onboard their physical assets and
+                    resources and participate in our platform.
+                  </p>
+                  <div id="btnText">
+                    <button mat-button class="button-submit" role="button">Read More >></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+
+      </div>
+
+    </div>
+</div>
+
+<div *ngIf=" isAuthenticated && !loading && userType=='employee'">
+  <home-page-employee-landing></home-page-employee-landing>
+</div>
+
+<div *ngIf=" isAuthenticated && !loading && userType=='partner'">
+  <home-page-partner-landing></home-page-partner-landing>
+</div>
+
+<div  *ngIf=" isAuthenticated && !loading && userType=='consumer'">
+  <home-page-customer-landing></home-page-customer-landing>
+<div>

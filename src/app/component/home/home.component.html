@@ -1,0 +1,24 @@
+
+<div style="padding: 3.4%; padding-left: 20%;">
+<div class="card" style="width: 50rem; background-color: #ededed; border-radius: 0px;">
+   
+    <div class="card-body">
+      <h3 class="card-title">Authentication Details</h3>
+      <div class="alert alert-secondary" role="alert" *ngIf="(!token) && (accessTokenStatus != 'failed')">
+       <mat-spinner  [diameter]="30"></mat-spinner>
+      </div>
+      <div class="alert alert-success" role="alert" *ngIf="!!token">
+        Access token received
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="accessTokenStatus === 'failed'">
+        Failed to fetch access token from IDP
+      </div>
+      <div class="alert alert-secondary" role="alert" *ngIf="!!token">
+        <h5>{{token}}</h5>
+      </div>
+      
+      <a href="/" class="btn btn-primary" style="background-color: #ca0065; border: 0px;">Go Back</a>
+      
+    </div>
+  </div>
+</div>
