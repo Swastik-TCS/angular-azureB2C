@@ -29,7 +29,8 @@ export class HeaderComponent implements OnInit {
   }
 
   login() {
-    this.msalService.loginRedirect({scopes: ["https://Identifenceaadb2ctraining.onmicrosoft.com/tasks-api/tasks.read"]});
+    //this.msalService.loginRedirect({scopes: ["https://Identifenceaadb2ctraining.onmicrosoft.com/tasks-api/tasks.read"]});
+    this.msalService.loginRedirect();
   }
 
   logout() {

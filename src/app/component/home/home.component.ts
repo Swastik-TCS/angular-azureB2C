@@ -11,6 +11,7 @@ import { Subject, filter, takeUntil } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 accessTokenStatus: string | undefined;
+iDtoken: string | undefined;
 token: string | undefined;
 data: string | undefined;
 userName: string | undefined;
@@ -32,24 +33,15 @@ private readonly _destroying$ = new Subject<void>();
    }
   setDisplay() {
    this.isAuthenticated = this.msalService.instance.getAllAccounts().length > 0;
-   this.msalService.instance.acquireTokenSilent({scopes: ["https://Identifenceaadb2ctraining.onmicrosoft.com/tasks-api/tasks.read"],account: this.msalService.instance.getAllAccounts()[0]})
-  //  .subscribe({
-  //   next: (result) => {
-  //   this.token = result.accessToken;
-  //   this.getAPIdata();
-  //   },
-  //   error: (err) => {
-  //     console.log("#######################################AccessTokenError############");
-      
-  //     this.accessTokenStatus = "failed"
-  //   }
-  //  })
+   this.msalService.instance.acquireTokenSilent({scopes: ["https://Identifenceaadb2ctraining.onmicrosoft.com/tasks-api/tasks.read"], account: this.msalService.instance.getAllAccounts()[0]})
   .then((result) => {
+    this.iDtoken = result.idToken; 
     this.token = result.accessToken;
   }).catch((err) => {
+    this.iDtoken = this.msalService.instance.getAllAccounts()[0].idToken
     this.accessTokenStatus = "failed";
   })
-   this.userName = this.msalService.instance.getAllAccounts()[0].name;
+  
   }
 
   ngOnDestroy(): void {

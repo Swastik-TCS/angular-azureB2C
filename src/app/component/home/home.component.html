@@ -4,6 +4,12 @@
    
     <div class="card-body">
       <h3 class="card-title">Authentication Details</h3>
+      <div class="alert alert-warning" role="alert" *ngIf="!!iDtoken">
+        ID token received
+      </div>
+      <div class="alert alert-secondary" role="alert" *ngIf="!!iDtoken">
+        <h5>{{iDtoken}}</h5>
+      </div>
       <div class="alert alert-secondary" role="alert" *ngIf="(!token) && (accessTokenStatus != 'failed')">
        <mat-spinner  [diameter]="30"></mat-spinner>
       </div>
