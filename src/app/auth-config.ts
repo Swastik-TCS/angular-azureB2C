@@ -18,7 +18,8 @@ const isIE = window.navigator.userAgent.indexOf("MSIE ") > -1 || window.navigato
 export const b2cPolicies = {
     names: {
         signUpSignIn: 'B2C_1A_SIGNUPORSIGNINWITHUSERNAMEORPHONEOREMAIL_IDENTIFENCE_LOGISTICS_AZUREAD_B2C',
-        forgotPassword: 'B2C_1A_CUSTOMPOLICY_BASIC',
+        forgotPassword: 'B2C_1A_FORGOT_PASSWORD_IDENTIFENCE_LOGISTICS_AZUREAD_B2C',
+        forgotUsername: 'B2C_1A_FORGOT_USERNAME_IDENTIFENCE_LOGISTICS_AZUREAD_B2C',
         editProfile: 'B2C_1A_CUSTOMPOLICY_BASIC',
     },
     authorities: {
@@ -26,7 +27,10 @@ export const b2cPolicies = {
             authority: 'https://identifenceb2cdev.b2clogin.com/identifenceb2cdev.onmicrosoft.com/B2C_1A_SIGNUPORSIGNINWITHUSERNAMEORPHONEOREMAIL_IDENTIFENCE_LOGISTICS_AZUREAD_B2C',
         },
         forgotPassword: {
-            authority: 'https://Identifenceaadb2ctraining.b2clogin.com/Identifenceaadb2ctraining.onmicrosoft.com/B2C_1A_CUSTOMPOLICY_BASIC',
+            authority: 'https://identifenceb2cdev.b2clogin.com/identifenceb2cdev.onmicrosoft.com/B2C_1A_FORGOT_PASSWORD_IDENTIFENCE_LOGISTICS_AZUREAD_B2C',
+        },
+        forgotUsername: {
+            authority: 'https://identifenceb2cdev.b2clogin.com/identifenceb2cdev.onmicrosoft.com/B2C_1A_FORGOT_USERNAME_IDENTIFENCE_LOGISTICS_AZUREAD_B2C',
         },
         editProfile: {
             authority: 'https://Identifenceaadb2ctraining.b2clogin.com/Identifenceaadb2ctraining.onmicrosoft.com/B2C_1A_CUSTOMPOLICY_BASIC',
@@ -71,9 +75,6 @@ export const msalConfig: Configuration = {
 
 export const msalGuardConfig: MsalGuardConfiguration = {
     interactionType: InteractionType.Redirect,
-    authRequest: {
-        scopes: ["https://Identifenceaadb2ctraining.onmicrosoft.com/tasks-api/tasks.read"]
-    }
 }
 export const msalInterceptorConfig: MsalInterceptorConfiguration = {
     interactionType: InteractionType.Redirect,

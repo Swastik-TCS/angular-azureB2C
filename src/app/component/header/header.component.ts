@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MsalBroadcastService, MsalService } from '@azure/msal-angular';
 import { EventMessage, EventType, InteractionStatus } from '@azure/msal-browser';
 import { Subject, filter, takeUntil } from 'rxjs';
+import { b2cPolicies } from 'src/app/auth-config';
 
 @Component({
   selector: 'app-header',
@@ -35,6 +36,14 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.msalService.logoutRedirect();
+  }
+
+  changePassword(){
+    let forgetPasswordrequest = {
+      scopes: ["openid"],
+      authority: b2cPolicies.authorities.forgotPassword.authority
+    }
+    this.msalService.loginRedirect(forgetPasswordrequest)
   }
 
   setLoginDisplay() {

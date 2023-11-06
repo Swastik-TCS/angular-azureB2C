@@ -35,6 +35,8 @@ import { HomePageEmployeeLanding } from './component/home-page/home-page-employe
 import { HomePagePartnerLanding } from './component/home-page/home-page-partner-landing/home-page-partner-landing.component';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserInfoComponnent } from './component/user-info/user-info.component';
+import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
+import { ForgetUsernameComponent } from './component/forget-username/forget-username.component';
 
 // export function MSALInstanceFactory(): IPublicClientApplication {
 //   return new PublicClientApplication(msalConfig);
@@ -61,6 +63,8 @@ import { UserInfoComponnent } from './component/user-info/user-info.component';
     HomePageEmployeeLanding,
     HomePagePartnerLanding,
     FooterComponent,
+    ForgetPasswordComponent,
+    ForgetUsernameComponent,
   ],
   imports: [
     BrowserModule,

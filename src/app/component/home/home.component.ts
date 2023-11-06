@@ -33,7 +33,7 @@ private readonly _destroying$ = new Subject<void>();
    }
   setDisplay() {
    this.isAuthenticated = this.msalService.instance.getAllAccounts().length > 0;
-   this.msalService.instance.acquireTokenSilent({scopes: ["https://Identifenceaadb2ctraining.onmicrosoft.com/tasks-api/tasks.read"], account: this.msalService.instance.getAllAccounts()[0]})
+   this.msalService.instance.acquireTokenSilent({scopes: ["https://identifenceb2cdev.onmicrosoft.com/11f03740-209c-48d4-961a-415cd8ceec70/tasks.read"], account: this.msalService.instance.getAllAccounts()[0]})
   .then((result) => {
     this.iDtoken = result.idToken; 
     this.token = result.accessToken;
