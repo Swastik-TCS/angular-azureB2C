@@ -10,7 +10,7 @@ import { ForgetUsernameComponent } from './component/forget-username/forget-user
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'forgetpassword', component: ForgetPasswordComponent },
+  { path: 'forgetpassword&hint', component: ForgetPasswordComponent },
   { path: 'forgetusername', component: ForgetUsernameComponent },
   { path: 'userinfo', component: UserInfoComponnent, canActivate:[MsalGuard] },
   {path: "home", component: HomeComponent, canActivate: [MsalGuard]},
