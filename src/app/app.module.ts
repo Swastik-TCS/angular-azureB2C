@@ -37,6 +37,8 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
 import { UserInfoComponnent } from './component/user-info/user-info.component';
 import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
 import { ForgetUsernameComponent } from './component/forget-username/forget-username.component';
+import { ChangePasswordComponent } from './component/change-password/change-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // export function MSALInstanceFactory(): IPublicClientApplication {
 //   return new PublicClientApplication(msalConfig);
@@ -65,6 +67,7 @@ import { ForgetUsernameComponent } from './component/forget-username/forget-user
     FooterComponent,
     ForgetPasswordComponent,
     ForgetUsernameComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,7 +91,9 @@ import { ForgetUsernameComponent } from './component/forget-username/forget-user
     MatSidenavModule,
     MatMenuModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     
